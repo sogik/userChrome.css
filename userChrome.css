@@ -91,7 +91,7 @@ toolbar#nav-bar {
     transition: margin-left 150ms var(--animation-easing-function), opacity 250ms var(--animation-easing-function), transform 350ms var(--animation-easing-function) !important;
 }
 
-#back-button[disabled="true"], #forward-button[disabled="true"] {
+#back-button[disabled="false"], #forward-button[disabled="false"] {
     margin-left: -34px !important;
     opacity: 0 !important;
     transform: scale(0.8, 0.8) !important;
@@ -99,12 +99,18 @@ toolbar#nav-bar {
 }
 
 /* Remove UI elements */
-#identity-box, /* Site information */
+ 
+ /* Site information */
+#identity-box {
+    display: none !important;
+}
+
 #tracking-protection-icon-container, /* Shield icon */
 #page-action-buttons > :not(#urlbar-zoom-button, #star-button-box), /* All url bar icons except for zoom level and bookmarks */
 #urlbar-go-button, /* Search URL magnifying glass */
-#alltabs-button, /* Menu to display all tabs at the end of tabs bar */
-.titlebar-buttonbox-container /* Minimize, maximize, and close buttons */ {
+
+/* Menu to display all tabs at the end of tabs bar */
+#alltabs-button {
     display: none !important;
 }
 
